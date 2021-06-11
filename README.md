@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### 1 Course parte understanding the most important concept of react
+
+This was by building and covaining components.
+How to share data through components with props.
+Spliting up the components to specify functions/.
+Avoid to repiateng the component by creating independent components with their own responsabilities
+Create type of components like wrappers
+
+
+### 2 

@@ -79,4 +79,6 @@ Avoid to repiateng the component by creating independent components with their o
 Create type of components like wrappers
 
 
-### 2 
+### 2 Course understanding a little bit deep the framework react
+
+The use of useState hook in react.

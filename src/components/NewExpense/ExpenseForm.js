@@ -6,61 +6,23 @@ const ExpenseForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
 
-  // const [userInput, setUserInput] = useState({
-  //   enteredTitle: '',
-  //   enteredAmount: '',
-  //   enteredDate: ''
-  // });
-
   const titleChangeHandler = ({ target }) => {
     setEnteredTitle(target.value);
-
-    // setUserInput({
-    //   ...userInput,
-    //   enteredTitle: target.value,
-    // });
-
-    // setUserInput((prevState) => {
-    //   return {...prevState, enteredAmount: target.value}
-    // });
   };
 
   const AmountChangeHandler = ({ target }) => {
     setEnteredAmount(target.value);
-
-    // setUserInput({
-    //   ...userInput,
-    //   enteredTitle: target.value,
-    // });
-
-    // setUserInput((prevState) => {
-    //   return {...prevState, enteredAmount: target.value}
-    // });
   };
 
   const dateChangeHandler = ({ target }) => {
     setEnteredDate(target.value);
-
-    // setUserInput({
-    //   ...userInput,
-    //   enteredTitle: target.value,
-    // });
-    //when you state depends of the previous state, you should not do this like
-    //the spread operator form
-    // setUserInput((prevState) => {
-    //   return {...prevState, enteredTitle: target.value}
-    // });
-    //If the current state depends of the previous state I should memorize this syntax.
-    //the function one, because that prevstate keeps an screenshot of the prevState
   };
 
-  //when you create forms is important to know the two way binding
-  //because your are listening the input and also sending a value to that input.
   const submitHandler = (event) => {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -104,6 +66,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button onClick={props.onStopEditing}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
